@@ -1,0 +1,232 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="static/bootstrap.min.css" />
+    <title>display data</title>
+    <style>
+        .button {
+            background-color: #4CAF50;
+
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body bgcolor="orange">
+    <div class="container">
+        <div class="jumbotron">
+
+            <div class="row">
+                <div class="col-md-3" style="font-size: large;"><b> Model #</b> </div>
+                <div class="col-md-2" style="font-size: large;"><b>Best Buy</b></div>
+                <div class="col-md-2" style="font-size: large;" ><b>Bjs</b></div>
+                <div class="col-md-2" style="font-size: large;" ><b>Walmart</b></div>
+                <hr>
+
+            </div>
+            <div class="row">
+                <div class="col-md-3"> <input type="text" id="text1"> </div>
+                <div class="col-md-2">
+                    <input id="text1_best_buy" type="text" value=" " size="10" readonly>
+                </div>
+                <div class="col-md-2">
+                    <input id="text1_bjs" type="text" value=" " size="10" readonly>
+                </div>
+                <div class="col-md-2"> <input id="text1_walmart" type="text" value=" " size="10" readonly> </div>
+
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3"> <input type="text" id="text2"> </div>
+                <div class="col-md-2">
+                    <input id="text2_best_buy" type="text" value=" " size="10" readonly>
+                </div>
+                <div class="col-md-2">
+                    <input id="text2_bjs" type="text" value=" " size="10" readonly>
+                </div>
+                <div class="col-md-2"> <input id="text2_walmart" type="text" value=" " size="10" readonly> </div>
+
+
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3"> <input type="text" id="text3"> </div>
+                <div class="col-md-2">
+                    <input id="text3_best_buy" type="text" value=" " size="10" readonly>
+                </div>
+                <div class="col-md-2">
+                    <input id="text3_bjs" type="text" value=" " size="10" readonly>
+                </div>
+                <div class="col-md-2"> <input id="text3_walmart" type="text" value=" " size="10" readonly> </div>
+
+
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3"> <input type="text" id="text4"> </div>
+                <div class="col-md-2">
+                    <input id="text4_best_buy" type="text" value=" " size="10" readonly>
+                </div>
+                <div class="col-md-2">
+                    <input id="text4_bjs" type="text" value=" " size="10" readonly>
+                </div>
+                <div class="col-md-2"> <input id="text4_walmart" type="text" value=" " size="10" readonly> </div>
+
+
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3"> <input type="text" id="text5"> </div>
+                <div class="col-md-2">
+                    <input id="text5_best_buy" type="text" value=" " size="10" readonly>
+                </div>
+                <div class="col-md-2">
+                    <input id="text5_bjs" type="text" value=" " size="10" readonly>
+                </div>
+                <div class="col-md-2"> <input id="text5_walmart" type="text" value=" " size="10" readonly> </div>
+
+
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+
+                    <input type="button" class="button" value="submit" id="submit">
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <!-- <input type="button" id="submit" value="submit" > -->
+
+        </div>
+
+    </div>
+
+    <script src="static/jquery-3.5.1.js"></script>
+    <script>
+        $("#submit").click(function () {
+
+            $("#text1_best_buy").val("");
+            $("#text1_bjs").val("");
+            $("#text1_walmart").val("");
+            $("#text2_best_buy").val("");
+            $("#text2_bjs").val("");
+            $("#text2_walmart").val("");
+            $("#text3_best_buy").val("");
+            $("#text3_bjs").val("");
+            $("#text3_walmart").val("");
+            $("#text4_best_buy").val("");
+            $("#text4_bjs").val("");
+            $("#text4_walmart").val("");
+            $("#text5_best_buy").val("");
+            $("#text5_bjs").val("");
+            $("#text5_walmart").val("");
+
+
+
+            var value1 = $("#text1").val();
+            var value2 = $("#text2").val();
+            var value3 = $("#text3").val();
+            var value4 = $("#text4").val();
+            var value5 = $("#text5").val();
+            var values_all = [];
+            if (value1) {
+                values_all.push({ "value1": value1 })
+                $("#text1_best_buy").val("loading ..");
+                $("#text1_bjs").val("loading...");
+                $("#text1_walmart").val("loading...");
+            }
+            if (value2) {
+                values_all.push({ "value2": value1 })
+                $("#text2_best_buy").val("loading ..");
+                $("#text2_bjs").val("loading...");
+                $("#text2_walmart").val("loading...");
+            }
+            if (value3) {
+                values_all.push({ "value3": value3 })
+                $("#text3_best_buy").val("loading ..");
+                $("#text3_bjs").val("loading...");
+                $("#text3_walmart").val("loading...");
+            }
+            if (value4) {
+                values_all.push({ "value4": value4 })
+                $("#text4_best_buy").val("loading ..");
+                $("#text4_bjs").val("loading...");
+                $("#text4_walmart").val("loading...");
+            }
+            if (value5) {
+                values_all.push({ "value5": value5 })
+                $("#text5_best_buy").val("loading ..");
+                $("#text5_bjs").val("loading...");
+                $("#text5_walmart").val("loading...");
+            }
+            
+            
+            if (values_all.length > 0) {
+                
+                
+                for (i = 0; i < values_all.length; i++) {
+                    document.getElementById("submit").disabled = true;
+                    data = values_all[i]
+                    console.log(data)
+                    $.ajax({
+                        type: "POST",
+                        url: "/response",
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(data),
+                        dataType: "json",
+                        success: function (response) {
+                            var places_of_replacement = response.place
+                            if (places_of_replacement == "value1") {
+                                $("#text1_best_buy").val(response.bestbuy);
+                                $("#text1_bjs").val(response.bjs);
+                                $("#text1_walmart").val(response.walmart);
+                            }
+                            if (places_of_replacement == "value2") {
+                                $("#text2_best_buy").val(response.bestbuy);
+                                $("#text2_bjs").val(response.bjs);
+                                $("#text2_walmart").val(response.walmart);
+                            }
+                            if (places_of_replacement == "value3") {
+                                $("#text3_best_buy").val(response.bestbuy);
+                                $("#text3_bjs").val(response.bjs);
+                                $("#text3_walmart").val(response.walmart);
+                            }
+                            if (places_of_replacement == "value4") {
+                                $("#text4_best_buy").val(response.bestbuy);
+                                $("#text4_bjs").val(response.bjs);
+                                $("#text4_walmart").val(response.walmart);
+                            }
+                            if (places_of_replacement == "value5") {
+                                $("#text5_best_buy").val(response.bestbuy);
+                                $("#text5_bjs").val(response.bjs);
+                                $("#text5_walmart").val(response.walmart);
+                            }
+                            console.log("inhere")
+                            document.getElementById("submit").disabled = false;
+                        },
+                        error: function (response) {
+                            alert("server offline");
+                        }
+                    });
+                    
+                }
+            }
+            else{
+                alert("all values empty")
+            }
+
+
+        });
+    </script>
+</body>
+
+</html>
